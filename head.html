@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>导航栏</title>
+
+<link rel="stylesheet" type="text/css" href="css/head.css">
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<style>
+body
+    {
+        background-color: beige;
+    }
+div.img
+{
+  margin: 2px;
+  height: auto;
+  width: auto;
+  float: left;
+  
+}	
+
+</style>
+</head>
+<body>
+
+<div class="header">
+	<div class="headerinner">
+		<ul class="headernav">
+			<li class="logo">
+				<!---<img src="" alt="" />--->
+			</li>
+			<li><a href="home.html">首页</a></li>
+			<li><a href="make.html" >新建问答</a></li>
+			<li><a href="popanswer.html">人气问答排名</a></li>
+			<li><a href="index.html" >好友推送</a></li>
+			<li><a href="about.html" >about</a></li>
+			<li class="search">
+				<a class="search_pic"></a>
+			</li>
+			<li class="list">
+				<a></a>
+			</li>
+		</ul>
+		<!-- 搜索 -->
+		<form action="">
+			<div class="search_main">
+				<button class="search_btn" type="submit"></button>
+				<input class="search_text" type="text" placeholder="搜索">
+				<span class="close_btn"></span>
+			</div>
+		</form>
+		<!-- 登录 -->
+		<div class="member">
+			<p>用户中心</p>
+			<ul>
+				<li>
+					<img src="img/huiyuan1.png" alt="">
+					<a href="login.html">登录</a>
+				</li>
+				<li>
+					<img src="img/huiyuan1.png" alt="">
+					<a href="weibo.html">微博用户登录</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="img">
+ <a target="_blank" href="klematis_big.htm"><img src="friend1.jpg" alt="Klematis" width="620" height="552"></a>
+<div class="img">
+ <a target="_blank" href="klematis2_big.htm"><img src="friend2.jpg" alt="Klematis" width="620" height="550"></a>
+</div>
+
+<p>
+<h1> .</h1>
+<h1>如果通过试卷问答找到了志同道合的好朋友就请发给我们吧！</h1>
+<h1>e-mail:857709365qq.com</h1>
+    
+<script>
+$(function(){
+	/*搜索*/
+	$(".search_pic").click(function(){
+		$(".headernav").fadeOut(500);
+		$(".search_main").fadeIn(1000);
+	});
+	$(".search_main .close_btn").click(function(){
+		$(".search_main").fadeOut(500);
+		$(".headernav").fadeIn(1000);
+	});
+	/*登录*/
+	$(".list a").click(function(){
+		$(".member").slideToggle(500);
+	});
+
+});
+</script>
+
+<div style="text-align:center;margin:150px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+
+</div>
+</body>
+</html>
